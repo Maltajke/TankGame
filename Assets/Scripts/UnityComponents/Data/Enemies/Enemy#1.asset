@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5711e00313fe1048b62ca87cb36d253, type: 3}
+  m_Name: Enemy#1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6311663963945195757, guid: fc34971bc5461b44896517e41e8212ee, type: 3}
+  properties:
+    speed: 2
+    armor: 0.5
+    startHealth: 100
+    health: 0
+    weapons:
+    - gunType: 0
+      prefab: {fileID: 0}
+      bulletStart: {fileID: 0}
+      bulletSpeed: 0
+      bulletType:
+        profile:
+          gunType: 0
+          prefab: {fileID: 0}
+          damage: 40
+          speed: 0
+        count: 0
+    currentWeapon:
+      gunType: 0
+      prefab: {fileID: 0}
+      bulletStart: {fileID: 0}
+      bulletSpeed: 0
+      bulletType:
+        profile:
+          gunType: 0
+          prefab: {fileID: 0}
+          damage: 0
+          speed: 0
+        count: 0
