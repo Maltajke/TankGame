@@ -84,9 +84,9 @@ namespace MaltaTanks
             if (_systems != null && _systemsFixed != null) 
             {
                 _systemsFixed.Destroy();
-                _systems.Destroy ();                
+                _systems.Destroy ();
                 _systemsFixed = null;
-                _systems = null;                
+                _systems = null;
                 _world.Destroy ();
                 _world = null;
             }

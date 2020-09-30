@@ -10,12 +10,16 @@ namespace MaltaTanks
         readonly EcsFilter<TankComponent, PropertyComponent> _tank = null;
         readonly EcsWorld _world = null;
 
+        private const string bullet = "Bullet";
+        private const string enemy = "Enemy";
+        private const string player = "Player";
+
         void IEcsRunSystem.Run ()
         {
             foreach(var i in _hit)
                 switch (_hit.Get1(i).emitter.tag)
                 {
-                    case "Bullet":
+                    case bullet:
                         foreach (var p in _pools)
                             foreach (var bull in _pools.Get1(p).bullets)
                                 if (bull.prefab == _hit.Get1(i).emitter)
@@ -30,9 +34,9 @@ namespace MaltaTanks
                         _hit.Get1(i).emitter.SetActive(false);
                         break;
 
-                    case "Enemy":
+                    case enemy:
                         foreach (var e in _enemies)
-                            if (_hit.Get1(i).hitCollider.tag == "Player")
+                            if (_hit.Get1(i).hitCollider.tag == player)
                                 if (_enemies.Get2(e).@object == _hit.Get1(i).emitter)
                                 {
                                     ref var damageEvent = ref _world.NewEntity().Get<DamageEvent>();

@@ -32,14 +32,14 @@ namespace MaltaTanks
             foreach(var i in _state)
                 switch (_state.Get1(i).gameState)
                 {
-                    case global::GameState.Play:
+                    case GameState.Play:
                         break;
-                    case global::GameState.Pause:
+                    case GameState.Pause:
                         break;
-                    case global::GameState.End:
+                    case GameState.End:
                         _endGame.SetActive(true);
                         break;
-                    case global::GameState.Quit:
+                    case GameState.Quit:
                         break;
                 }
         }
